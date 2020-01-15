@@ -7,6 +7,101 @@
     <title>--project-name--</title>
   </head>
   <body>
-    <h1>Devkit CLI</h1>
+    <header>
+      <h1 id="title">cluster-css survey form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <!-- name -->
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input id="name" type="text" placeholder="Your Name" required />
+        </div>
+        <!-- email -->
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input id="email" type="email" placeholder="Your Email" required />
+        </div>
+        <!-- age -->
+        <div class="form-group">
+          <label id="number-label" for="number">Age (Optional)</label>
+          <input id="number" type="number" placeholder="Age" min="10" max="99" />
+        </div>
+        <!-- role -->
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown" name="role">
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <!-- recommend -->
+        <div class="form-group">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label for="user-recommend">
+            <input type="radio" name="user-recommend" value="definitely" checked />
+            Definitely
+          </label>
+          <label for="user-recommend">
+            <input type="radio" name="user-recommend" value="maybe" checked />
+            Maybe
+          </label>
+          <label for="user-recommend">
+            <input type="radio" name="user-recommend" value="not-sure" checked />
+            Not Sure
+          </label>
+        </div>
+        <!-- most like -->
+        <div class="form-group">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select id="most-like" name="mostLike" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
+        <!-- improve -->
+        <div class="form-group">
+          <p>What would you like to see improved? (Check all that apply)</p>
+          <label for="improve">
+            <input type="checkbox" name="improve" value="front-end-projects" />
+            Front End Projects
+          </label>
+          <label for="improve">
+            <input type="checkbox" name="improve" value="front-end-projects" />
+            Back End Projects
+          </label>
+          <label for="improve">
+            <input type="checkbox" name="improve" value="front-end-projects" />
+            Data Visualization
+          </label>
+          <label for="improve">
+            <input type="checkbox" name="improve" value="front-end-projects" />
+            Challenges
+          </label>
+          <label for="improve">
+            <input type="checkbox" name="improve" value="front-end-projects" />
+            Forum
+          </label>
+        </div>
+        <!-- comments -->
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea id="comments" name="comment" cols="30" rows="10" placeholder="Your Comments Here..."></textarea>
+        </div>
+        <!-- submit -->
+        <div class="form-group">
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>
