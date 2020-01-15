@@ -1,7 +1,8 @@
 @import "./cluster-css/cluster";
 
 header,
-main {
+main,
+footer {
   padding: 2rem;
   @include ccss-on-tablet-and-up {
     padding: 4rem;
@@ -52,5 +53,14 @@ label {
   input[type="radio"] {
     display: inline-block;
     margin-right: 0.5rem;
+  }
+}
+
+ul {
+  @include list-reset;
+
+  li {
+    margin: 0 1rem;
+    padding: 0.5rem;
   }
 }

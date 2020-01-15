@@ -23,12 +23,18 @@ img {
   &.icon {
     cursor: pointer;
     padding: 0.25rem;
-    height: 32px;
-    width: 32px;
+    // height: 2rem;
+    width: 2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     object-position: 50% 50%;
     object-fit: contain;
+  }
+
+  &.icon-large {
+    // height: 2.5rem;
+    width: 2.5rem;
+    color: #000000de;
   }
 }
