@@ -8,10 +8,23 @@ main {
   }
 }
 
+$clip-amount: 16rem;
+
+.header-wrapper {
+  background-color: lighten($color: $ccss-primary-color, $amount: 50);
+  padding: calc(#{$clip-amount} / 8) 0 $clip-amount;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - #{$clip-amount}), 0% 100%);
+}
+
+main {
+  margin-top: -$clip-amount;
+}
+
 .form-group {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   p,
   .form-group-title {
+    font-weight: 400;
     margin: 0 0 0.5rem;
   }
 }
@@ -21,8 +34,16 @@ input[type="email"],
 input[type="number"],
 select,
 textarea {
+  outline: none;
   display: block;
+  padding: 0.5rem;
   width: 100%;
+  border-radius: 2px;
+  border: solid 1px lighten($color: $ccss-mutedblack-color, $amount: 60);
+}
+
+::placeholder {
+  color: lighten($color: $ccss-mutedblack-color, $amount: 60);
 }
 
 label {
@@ -30,5 +51,6 @@ label {
   input[type="checkbox"],
   input[type="radio"] {
     display: inline-block;
+    margin-right: 0.5rem;
   }
 }

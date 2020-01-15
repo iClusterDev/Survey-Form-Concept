@@ -7,26 +7,22 @@
     <title>--project-name--</title>
   </head>
   <body>
-    <div class="container">
+    <div class="header-wrapper">
       <header class="text-align-center">
-        <h1 id="title">cluster-css survey form</h1>
-        <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <h1 id="title" class="text-primary">ClusterCSS</h1>
+        <p id="description" class="text-muted">Thank you for taking the time to help us improve the framework</p>
       </header>
-      <main class="elevation-1">
-        <form id="survey-form" class="text-weight-medium">
-          <!-- name -->
+    </div>
+    <div class="container">
+      <main class="elevation-1 white">
+        <form id="survey-form" class="text-weight-light">
+          <!-- name email age -->
           <div class="form-group">
             <label id="name-label" for="name" class="form-group-title">Name</label>
-            <input id="name" type="text" placeholder="Your Name" required />
-          </div>
-          <!-- email -->
-          <div class="form-group">
+            <input id="name" type="text" placeholder="Your Name" required autocomplete="off" class="mb-1" />
             <label id="email-label" for="email" class="form-group-title">Email</label>
-            <input id="email" type="email" placeholder="Your Email" required />
-          </div>
-          <!-- age -->
-          <div class="form-group">
-            <label id="number-label" for="number" class="form-group-title">Age (Optional)</label>
+            <input id="email" type="email" placeholder="Your Email" required autocomplete="off" class="mb-1" />
+            <label id="number-label" for="number" class="form-group-title">Age <span class="text-small text-muted">(Optional)</span></label>
             <input id="number" type="number" placeholder="Age" min="10" max="99" />
           </div>
           <!-- role -->
@@ -43,7 +39,7 @@
           </div>
           <!-- recommend -->
           <div class="form-group">
-            <p>Would you recommend freeCodeCamp to a friend?</p>
+            <p>Would you recommend ClusterCSS to a colleague?</p>
             <label for="user-recommend">
               <input type="radio" name="user-recommend" value="definitely" checked />
               Definitely
@@ -59,18 +55,18 @@
           </div>
           <!-- most like -->
           <div class="form-group">
-            <p>What is your favorite feature of freeCodeCamp?</p>
+            <p>What is your favorite feature of ClusterCSS?</p>
             <select id="most-like" name="mostLike" required>
               <option disabled selected value>Select an option</option>
-              <option value="challenges">Challenges</option>
-              <option value="projects">Projects</option>
-              <option value="community">Community</option>
-              <option value="openSource">Open Source</option>
+              <option value="variables">Variables</option>
+              <option value="modules">Modules</option>
+              <option value="plugins">Plugins</option>
+              <option value="accessibility">Accessibility</option>
             </select>
           </div>
           <!-- improve -->
           <div class="form-group">
-            <p>What would you like to see improved? (Check all that apply)</p>
+            <p>What would you like to see improved? <span class="text-small text-muted">(Check all that apply)</span></p>
             <label for="improve">
               <input type="checkbox" name="improve" value="front-end-projects" />
               Front End Projects
@@ -99,11 +95,11 @@
           </div>
           <!-- submit -->
           <div class="form-group">
-            <button id="submit" type="submit" class="btn btn-block btn-squared black">Submit</button>
+            <button id="submit" type="submit" class="btn btn-block btn-large primary">Submit</button>
           </div>
         </form>
       </main>
     </div>
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
