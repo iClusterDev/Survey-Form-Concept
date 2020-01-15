@@ -3,22 +3,22 @@
 header,
 main,
 footer {
-  padding: 2rem;
+  padding: 4rem;
   @include ccss-on-tablet-and-up {
-    padding: 4rem;
+    // padding: 4rem;
   }
 }
 
 $clip-amount: 16rem;
 
 .header-wrapper {
+  padding-bottom: 16rem;
   background-color: lighten($color: $ccss-primary-color, $amount: 50);
-  padding: calc(#{$clip-amount} / 8) 0 $clip-amount;
-  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - #{$clip-amount}), 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 16rem), 0% 100%);
 }
 
 main {
-  margin-top: -$clip-amount;
+  margin-top: -16rem;
 }
 
 .form-group {
@@ -63,4 +63,8 @@ ul {
     margin: 0 1rem;
     padding: 0.5rem;
   }
+}
+
+.container {
+  padding: 0;
 }
